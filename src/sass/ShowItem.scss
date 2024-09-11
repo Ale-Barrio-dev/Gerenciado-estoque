@@ -1,0 +1,46 @@
+.wrapperShowItem {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+
+  .item {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    width: 100%;
+    max-width: 600px;
+    margin: 1rem;
+
+    .containerSpecification {
+      margin: 1rem 0 1rem 0;
+    }
+
+    .NameItem {
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .specificationItems {
+      background-color: var(--secondary-bg);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 15rem;
+      font-size: 1rem;
+    }
+
+    .paragraph {
+      background-color: var(--card-hover-bg);
+      padding: 1rem;
+      border-radius: 5px;
+      color: var(--text-color);
+    }
+  }
+}

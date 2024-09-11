@@ -1,0 +1,39 @@
+.containerNav {
+  display: flex;
+  height: 9dvh;
+  padding-top: 1rem;
+  justify-content: space-between;
+
+  .titleNav {
+    font-size: clamp(0.9375rem, 0.4261rem + 2.5568vw, 2.0625rem);
+    font-weight: bold;
+    padding: 0.5rem 0 0 2rem;
+  }
+
+  .containerBtn {
+    padding: 0.3rem;
+
+    .containerBtn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btnNav {
+      font-size: clamp(0.71875rem, 0.6477rem + 0.3551vw, 0.875rem);
+      background-color: transparent;
+      color: #fff;
+      max-width: 4rem;
+      margin: 0.9rem 0.2rem;
+      text-decoration: none;
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(167, 166, 165);
+        transition: 0.3s;
+      }
+    }
+  }
+}
