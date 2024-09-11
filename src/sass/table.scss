@@ -1,0 +1,95 @@
+.notice {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.wrapper {
+  min-height: 70dvh;
+}
+
+table {
+  width: 80%;
+  margin: 3rem auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  th,
+  td {
+    padding: 0.8rem;
+    text-align: left;
+    color: var(--text-color);
+  }
+
+  th {
+    background-color: var(--secondary-bg);
+  }
+
+  td {
+    background-color: var(--primary-bg);
+  }
+
+  tr:hover td {
+    background-color: var(--card-hover-bg);
+  }
+}
+
+@media (max-width: 540px) {
+  .table {
+    font-size: 0.7rem;
+
+    .thead {
+      display: none;
+    }
+
+    .tbody,
+    .tr,
+    .td,
+    .tdBtn {
+      display: block;
+      width: 100%;
+    }
+
+    .tr {
+      margin-bottom: 1rem;
+    }
+
+    .td {
+      text-align: right;
+      padding-left: 50%;
+      position: relative;
+    }
+
+    .tdBtn {
+      text-align: right;
+      padding-left: 30%;
+      position: relative;
+    }
+
+    .td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 1rem;
+      font-weight: bold;
+      text-align: left;
+    }
+
+    .btnView,
+    .btnUpdate {
+      font-size: 0.6rem;
+      padding: 0.3rem 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media (min-width: 541px) and (max-width: 712px) {
+  table {
+    width: 98%;
+
+    .tdBtn {
+      display: flex;
+    }
+  }
+}

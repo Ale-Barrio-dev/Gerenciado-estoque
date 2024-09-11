@@ -1,0 +1,40 @@
+.BtnDelete,
+.btnView,
+.btnUpdate {
+  font-size: 0.7rem;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnView {
+  background-color: #3b82f6;
+  color: var(--text-color);
+
+  &:hover {
+    background-color: #0965f8;
+  }
+}
+
+.btnUpdate {
+  background-color: #10b981;
+  color: var(--text-color);
+  margin-left: 0.3rem;
+
+  &:hover {
+    background-color: #0d996a;
+  }
+}
+
+.BtnDelete {
+  background-color: #ef4444;
+  color: var(--text-color);
+  margin-left: 0.3rem;
+
+  &:hover {
+    background-color: #c9302c;
+  }
+}

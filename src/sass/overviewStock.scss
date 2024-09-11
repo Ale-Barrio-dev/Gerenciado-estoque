@@ -1,0 +1,27 @@
+.containerStockLinks {
+  height: 4rem;
+  border-bottom: 2px solid #d1d5db;
+  padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.links {
+  margin-top: 1rem;
+  text-decoration: none;
+  color: #9ca3af;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &.active {
+    color: #f9fafb;
+    font-weight: bold;
+    border-bottom: 2px solid #3b82f6;
+    padding-bottom: 0.2rem;
+  }
+}
