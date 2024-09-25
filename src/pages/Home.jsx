@@ -10,7 +10,7 @@ export default function Home() {
 
   const today = dayjs();
 
-  const limiteDate = today.subtract(10, "day");
+  const limiteDate = today.subtract(1, "day");
 
   const recentItems = items.filter(
     (item) =>
@@ -53,16 +53,24 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {recentItems.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>
-                    <Link to={`/items/${item.id}`} className="button">
-                      Ver
-                    </Link>
+              {recentItems.length > 0 ? (
+                recentItems.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.name}</td>
+                    <td>
+                      <Link to={`/items/${item.id}`} className="button">
+                        Ver
+                      </Link>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="2" style={{ textAlign: "center" }}>
+                    Nenhum item recente encontrado.
                   </td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
@@ -76,17 +84,25 @@ export default function Home() {
               </tr>
             </thead>
             <tbody>
-              {lowQuantityItems.map((item) => (
-                <tr key={item.id}>
-                  <td>{item.name}</td>
-                  <td>{item.quantity}</td>
-                  <td>
-                    <Link to={`/items/${item.id}`} className="btnView">
-                      Ver
-                    </Link>
+              {lowQuantityItems.length > 0 ? (
+                lowQuantityItems.map((item) => (
+                  <tr key={item.id}>
+                    <td>{item.name}</td>
+                    <td>{item.quantity}</td>
+                    <td>
+                      <Link to={`/items/${item.id}`} className="btnView">
+                        Ver
+                      </Link>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="3" style={{ textAlign: "center" }}>
+                    Nenhum item com quantidade baixa encontrado.
                   </td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
